@@ -3,10 +3,10 @@ maintainer: "Richard Mortier <mort@cantab.net>"
 authors: [ "Richard Mortier" ]
 homepage: "https://eigen.tuxfamily.org/"
 bug-reports: "https://github.com/ocaml/opam-repository/issues"
-license: "MPL2"
+license: "MPL-2.0"
 
 build: [
-  ["sh" "-exc" "g++ $CXXFLAGS -I/usr/include/eigen3 test.cpp -leigen"] {os-distribution = "alpine"}
+  ["sh" "-exc" "g++ $CXXFLAGS -I/usr/include/eigen3 test.cpp"] {os-distribution = "alpine"}
 ]
 
 depexts: [
