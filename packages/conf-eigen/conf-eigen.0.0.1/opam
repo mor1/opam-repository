@@ -1,0 +1,21 @@
+opam-version: "2.0"
+maintainer: "Richard Mortier <mort@cantab.net>"
+authors: [ "Richard Mortier" ]
+homepage: "https://eigen.tuxfamily.org/"
+bug-reports: "https://github.com/ocaml/opam-repository/issues"
+license: "MPL2"
+
+build: [
+  ["sh" "-exc" "g++ $CFLAGS -I/usr/include/eigen test.c -leigen"] {os = "alpine"}
+]
+
+depexts: [
+  ["eigen"] {os-distribution = "alpine"}
+]
+
+synopsis: "Virtual package to install Eigen"
+description: """
+Ensures the Eigen library is installed for the OPAM package `eigen` required for Owl, OCaml's numerical library."""
+
+extra-files: ["test.c" "md5="]
+flags: conf
