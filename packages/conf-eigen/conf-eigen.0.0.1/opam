@@ -6,7 +6,7 @@ bug-reports: "https://github.com/ocaml/opam-repository/issues"
 license: "MPL2"
 
 build: [
-  ["sh" "-exc" "g++ $CFLAGS -I/usr/include/eigen test.c -leigen"] {os = "alpine"}
+  ["sh" "-exc" "g++ $CXXFLAGS -I/usr/include/eigen test.cpp -leigen"] {os = "alpine"}
 ]
 
 depexts: [
@@ -17,5 +17,5 @@ synopsis: "Virtual package to install Eigen"
 description: """
 Ensures the Eigen library is installed for the OPAM package `eigen` required for Owl, OCaml's numerical library."""
 
-extra-files: ["test.c" "md5="]
+extra-files: ["test.cpp" "md5=c32d05ad7e03938e26392354a1774534"]
 flags: conf
