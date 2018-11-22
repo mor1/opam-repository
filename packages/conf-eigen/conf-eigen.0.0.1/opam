@@ -6,7 +6,7 @@ bug-reports: "https://github.com/ocaml/opam-repository/issues"
 license: "MPL2"
 
 build: [
-  ["sh" "-exc" "g++ $CXXFLAGS -I/usr/include/eigen test.cpp -leigen"] {os = "alpine"}
+  ["sh" "-exc" "g++ $CXXFLAGS -I/usr/include/eigen test.cpp -leigen"] {os-distribution = "alpine"}
 ]
 
 depexts: [
