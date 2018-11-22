@@ -20,9 +20,10 @@ remove: [
   ["ocaml" "%{etc}%/eigen/_oasis_remove_.ml" "%{etc}%/eigen"]
 ]
 depends: [
-  "ocaml" {>= "4.02"}
   "ctypes" {>= "0.14.0"}
+  "conf-eigen" {>= "0.0.1"}
   "oasis" {build & >= "0.4"}
+  "ocaml" {>= "4.02"}
   "ocamlbuild" {build}
   "ocamlfind" {build}
 ]
@@ -34,4 +35,3 @@ url {
   src: "https://github.com/ryanrhymes/eigen/archive/0.0.6.tar.gz"
   checksum: "md5=cd094d5bb0394e193a3087ffc353ae94"
 }
-
