@@ -6,11 +6,11 @@ bug-reports: "https://github.com/ocaml/opam-repository/issues"
 license: "MPL2"
 
 build: [
-  ["sh" "-exc" "g++ $CXXFLAGS -I/usr/include/eigen test.cpp -leigen"] {os-distribution = "alpine"}
+  ["sh" "-exc" "g++ $CXXFLAGS -I/usr/include/eigen3 test.cpp -leigen"] {os-distribution = "alpine"}
 ]
 
 depexts: [
-  ["eigen"] {os-distribution = "alpine"}
+  ["eigen-dev"] {os-distribution = "alpine"}
 ]
 
 synopsis: "Virtual package to install Eigen"
